@@ -1,6 +1,6 @@
 <?php 
 
-include_once __DIR__ . '/../Models/convidado.php';
+include_once __DIR__ . '/../Controller/convidado.php';
 
 class ConvidadoDAO implements IConvidadoDAO {
 

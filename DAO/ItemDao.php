@@ -1,6 +1,6 @@
 <?php 
 
-include_once  __DIR__ . "/../Models/item.php";
+include_once  __DIR__ . "/../Controller/item.php";
 
 class ItemDAO implements IItens {
 

@@ -1,6 +1,6 @@
 <?php
     include_once "helpers/url.php";
-    include_once "Models/db.php";
+    include_once "helpers/db.php";
     include_once "DAO/ConvidadoDAO.php";
     include_once "DAO/ItemDao.php";
 
@@ -31,7 +31,7 @@
     <div id="container">
         <div class="form-container">
             <h2>Adicionar Item</h2>
-            <form action="<?php $BASE_URL?>Models/process.php" method="POST">
+            <form action="<?php $BASE_URL?>Controller/process.php" method="POST">
                 <label>Item</label>
                 <input type="text" name="Item" required>
 
@@ -41,7 +41,7 @@
 
         <div class="form-container">
             <h2>Adicionar Convidados</h2>
-            <form action="<?php $BASE_URL?>Models/process.php" method="POST">
+            <form action="<?php $BASE_URL?>Controller/process.php" method="POST">
                 <label>Nome</label>
                 <input type="text" name="Convidado" required>
 

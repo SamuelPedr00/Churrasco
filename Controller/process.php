@@ -1,10 +1,9 @@
 <?php 
 
-    include_once "db.php";
+    include_once "../helpers/db.php";
+    include_once "../helpers/url.php";
     include_once "../DAO/ConvidadoDAO.php";
     include_once "../DAO/ItemDAO.php";
-
-
 
     $convidadoDao = new ConvidadoDAO($conn);
     $itemDao = new ItemDAO($conn);
@@ -28,7 +27,7 @@
             $newconvidado->setConsumoL($ConsumoL);
             $newconvidado->setConsumoS($ConsumoS);
             $convidadoDao->create($newconvidado);
-            header("Location: http://localhost/churras");
+            header("Location: $BASE");
         }
         else{
 
@@ -37,7 +36,7 @@
             $newconvidado->setConsumoL($ConsumoL);
             $newconvidado->setConsumoS($ConsumoS);
             $convidadoDao->create($newconvidado);
-            header("Location: http://localhost/churras");
+            header("Location: $BASE");
         }
     }
 
@@ -60,16 +59,16 @@
             $newconvidado->setConsumoL($ConsumoL);
             $newconvidado->setConsumoS($ConsumoS);
             $convidadoDao->create($newconvidado);
-            header("Location: http://localhost/churras");
+            header("Location: $BASE");
         }
         else{
             $newitem->setItem($item);
             $itemDao->create($newitem);
-            header("Location: http://localhost/churras");
+            header("Location: $BASE");
         }
     }
     else{
-        header("Location: http://localhost/churras");
+        header("Location: $BASE");
     }
     
 ?>
